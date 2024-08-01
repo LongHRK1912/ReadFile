@@ -25,7 +25,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import com.apps.longhrk.core.designsystem.icon.NiaIcons
-import com.apps.longhrk.core.designsystem.theme.NiaTheme
+import com.apps.longhrk.core.designsystem.theme.HRKTheme
 
 /**
  * Now in Android toggle button with icon and checked icon content slots. Wraps Material 3
@@ -74,7 +74,7 @@ fun NiaIconToggleButton(
 @ThemePreviews
 @Composable
 fun IconButtonPreview() {
-    NiaTheme {
+    HRKTheme {
         NiaIconToggleButton(
             checked = true,
             onCheckedChange = { },
@@ -97,7 +97,7 @@ fun IconButtonPreview() {
 @ThemePreviews
 @Composable
 fun IconButtonPreviewUnchecked() {
-    NiaTheme {
+    HRKTheme {
         NiaIconToggleButton(
             checked = false,
             onCheckedChange = { },

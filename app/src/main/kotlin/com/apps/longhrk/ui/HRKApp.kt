@@ -61,19 +61,19 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavDestination
 import androidx.navigation.NavDestination.Companion.hierarchy
 import com.apps.longhrk.R
-import com.apps.longhrk.core.designsystem.component.NiaBackground
-import com.apps.longhrk.core.designsystem.component.NiaGradientBackground
-import com.apps.longhrk.core.designsystem.component.NiaNavigationSuiteScaffold
-import com.apps.longhrk.core.designsystem.component.NiaTopAppBar
+import com.apps.longhrk.core.designsystem.component.HRKBackground
+import com.apps.longhrk.core.designsystem.component.HRKGradientBackground
+import com.apps.longhrk.core.designsystem.component.HRKNavigationSuiteScaffold
+import com.apps.longhrk.core.designsystem.component.HRKTopAppBar
 import com.apps.longhrk.core.designsystem.icon.NiaIcons
 import com.apps.longhrk.core.designsystem.theme.GradientColors
 import com.apps.longhrk.core.designsystem.theme.LocalGradientColors
-import com.apps.longhrk.navigation.NiaNavHost
+import com.apps.longhrk.navigation.HRKNavHost
 import com.apps.longhrk.navigation.TopLevelDestination
 
 @Composable
-fun NiaApp(
-    appState: NiaAppState,
+fun HRKApp(
+    appState: HRKAppState,
     modifier: Modifier = Modifier,
     windowAdaptiveInfo: WindowAdaptiveInfo = currentWindowAdaptiveInfo(),
 ) {
@@ -81,8 +81,8 @@ fun NiaApp(
         appState.currentTopLevelDestination == TopLevelDestination.HOME
     var showSettingsDialog by rememberSaveable { mutableStateOf(false) }
 
-    NiaBackground(modifier = modifier) {
-        NiaGradientBackground(
+    HRKBackground(modifier = modifier) {
+        HRKGradientBackground(
             gradientColors = if (shouldShowGradientBackground) {
                 LocalGradientColors.current
             } else {
@@ -104,7 +104,7 @@ fun NiaApp(
                 }
             }
 
-            NiaApp(
+            HRKApp(
                 appState = appState,
                 snackbarHostState = snackbarHostState,
                 onTopAppBarActionClick = { showSettingsDialog = true },
@@ -119,8 +119,8 @@ fun NiaApp(
     ExperimentalMaterial3Api::class,
     ExperimentalComposeUiApi::class,
 )
-internal fun NiaApp(
-    appState: NiaAppState,
+internal fun HRKApp(
+    appState: HRKAppState,
     snackbarHostState: SnackbarHostState,
     onTopAppBarActionClick: () -> Unit,
     modifier: Modifier = Modifier,
@@ -130,7 +130,7 @@ internal fun NiaApp(
         .collectAsStateWithLifecycle()
     val currentDestination = appState.currentDestination
 
-    NiaNavigationSuiteScaffold(
+    HRKNavigationSuiteScaffold(
         navigationSuiteItems = {
             appState.topLevelDestinations.forEach { destination ->
                 val hasUnread = unreadDestinations.contains(destination)
@@ -184,7 +184,7 @@ internal fun NiaApp(
                 val destination = appState.currentTopLevelDestination
                 val shouldShowTopAppBar = destination != null
                 if (destination != null) {
-                    NiaTopAppBar(
+                    HRKTopAppBar(
                         titleRes = destination.titleTextId,
                         navigationIcon = NiaIcons.Search,
                         navigationIconContentDescription = stringResource(
@@ -212,7 +212,7 @@ internal fun NiaApp(
                         },
                     ),
                 ) {
-                    NiaNavHost(
+                    HRKNavHost(
                         appState = appState,
                         onShowSnackbar = { message, action ->
                             snackbarHostState.showSnackbar(

@@ -26,8 +26,6 @@ import androidx.navigation.compose.ComposeNavigator
 import androidx.navigation.compose.composable
 import androidx.navigation.createGraph
 import androidx.navigation.testing.TestNavHostController
-import com.apps.longhrk.ui.NiaAppState
-import com.apps.longhrk.ui.rememberNiaAppState
 import com.apps.longhrk.core.data.repository.CompositeUserNewsResourceRepository
 import com.apps.longhrk.core.testing.repository.TestNewsRepository
 import com.apps.longhrk.core.testing.repository.TestUserDataRepository
@@ -44,12 +42,12 @@ import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 
 /**
- * Tests [NiaAppState].
+ * Tests [HRKAppState].
  *
  * Note: This could become an unit test if Robolectric is added to the project and the Context
  * is faked.
  */
-class NiaAppStateTest {
+class HRKAppStateTest {
 
     @get:Rule
     val composeTestRule = createComposeRule()
@@ -63,7 +61,7 @@ class NiaAppStateTest {
         CompositeUserNewsResourceRepository(TestNewsRepository(), TestUserDataRepository())
 
     // Subject under test.
-    private lateinit var state: NiaAppState
+    private lateinit var state: HRKAppState
 
     @Test
     fun niaAppState_currentDestination() = runTest {
@@ -72,7 +70,7 @@ class NiaAppStateTest {
         composeTestRule.setContent {
             val navController = rememberTestNavController()
             state = remember(navController) {
-                NiaAppState(
+                HRKAppState(
                     navController = navController,
                     coroutineScope = backgroundScope,
                     networkMonitor = networkMonitor,
@@ -112,7 +110,7 @@ class NiaAppStateTest {
     @Test
     fun niaAppState_whenNetworkMonitorIsOffline_StateIsOffline() = runTest(UnconfinedTestDispatcher()) {
         composeTestRule.setContent {
-            state = NiaAppState(
+            state = HRKAppState(
                 navController = NavHostController(LocalContext.current),
                 coroutineScope = backgroundScope,
                 networkMonitor = networkMonitor,
@@ -132,7 +130,7 @@ class NiaAppStateTest {
     @Test
     fun niaAppState_differentTZ_withTimeZoneMonitorChange() = runTest(UnconfinedTestDispatcher()) {
         composeTestRule.setContent {
-            state = NiaAppState(
+            state = HRKAppState(
                 navController = NavHostController(LocalContext.current),
                 coroutineScope = backgroundScope,
                 networkMonitor = networkMonitor,

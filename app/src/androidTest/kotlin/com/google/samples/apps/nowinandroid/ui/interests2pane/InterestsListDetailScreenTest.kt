@@ -33,7 +33,7 @@ import androidx.test.espresso.Espresso
 import androidx.window.core.layout.WindowSizeClass
 import com.apps.longhrk.ui.interests2pane.InterestsListDetailScreen
 import com.apps.longhrk.core.data.repository.TopicsRepository
-import com.apps.longhrk.core.designsystem.theme.NiaTheme
+import com.apps.longhrk.core.designsystem.theme.HRKTheme
 import com.apps.longhrk.core.model.data.Topic
 import com.apps.longhrk.ui.stringResource
 import com.apps.longhrk.uitesthiltmanifest.HiltComponentActivity
@@ -101,7 +101,7 @@ class InterestsListDetailScreenTest {
             setContent {
                 with(TestDeviceConfig.Expanded) {
                     DeviceConfigurationOverride(override = sizeOverride) {
-                        NiaTheme {
+                        HRKTheme {
                             InterestsListDetailScreen(windowAdaptiveInfo = adaptiveInfo)
                         }
                     }
@@ -119,7 +119,7 @@ class InterestsListDetailScreenTest {
             setContent {
                 with(TestDeviceConfig.Compact) {
                     DeviceConfigurationOverride(override = sizeOverride) {
-                        NiaTheme {
+                        HRKTheme {
                             InterestsListDetailScreen(windowAdaptiveInfo = adaptiveInfo)
                         }
                     }
@@ -137,7 +137,7 @@ class InterestsListDetailScreenTest {
             setContent {
                 with(TestDeviceConfig.Expanded) {
                     DeviceConfigurationOverride(override = sizeOverride) {
-                        NiaTheme {
+                        HRKTheme {
                             InterestsListDetailScreen(windowAdaptiveInfo = adaptiveInfo)
                         }
                     }
@@ -159,7 +159,7 @@ class InterestsListDetailScreenTest {
             setContent {
                 with(TestDeviceConfig.Compact) {
                     DeviceConfigurationOverride(override = sizeOverride) {
-                        NiaTheme {
+                        HRKTheme {
                             InterestsListDetailScreen(windowAdaptiveInfo = adaptiveInfo)
                         }
                     }
@@ -182,7 +182,7 @@ class InterestsListDetailScreenTest {
             setContent {
                 with(TestDeviceConfig.Expanded) {
                     DeviceConfigurationOverride(override = sizeOverride) {
-                        NiaTheme {
+                        HRKTheme {
                             // Back press should not be handled by the two pane layout, and thus
                             // "fall through" to this BackHandler.
                             BackHandler {
@@ -209,7 +209,7 @@ class InterestsListDetailScreenTest {
             setContent {
                 with(TestDeviceConfig.Compact) {
                     DeviceConfigurationOverride(override = sizeOverride) {
-                        NiaTheme {
+                        HRKTheme {
                             InterestsListDetailScreen(windowAdaptiveInfo = adaptiveInfo)
                         }
                     }

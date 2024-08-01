@@ -29,7 +29,7 @@ import androidx.compose.ui.test.onRoot
 import com.github.takahirom.roborazzi.captureRoboImage
 import com.apps.longhrk.core.designsystem.component.NiaTab
 import com.apps.longhrk.core.designsystem.component.NiaTabRow
-import com.apps.longhrk.core.designsystem.theme.NiaTheme
+import com.apps.longhrk.core.designsystem.theme.HRKTheme
 import com.apps.longhrk.core.testing.util.DefaultRoborazziOptions
 import com.apps.longhrk.core.testing.util.captureMultiTheme
 import dagger.hilt.android.testing.HiltTestApplication
@@ -66,7 +66,7 @@ class TabsScreenshotTests {
                 DeviceConfigurationOverride(
                     DeviceConfigurationOverride.FontScale(2f),
                 ) {
-                    NiaTheme {
+                    HRKTheme {
                         NiaTabsExample("Looooong item")
                     }
                 }

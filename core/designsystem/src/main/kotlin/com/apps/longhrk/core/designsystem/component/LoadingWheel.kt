@@ -47,7 +47,7 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
-import com.apps.longhrk.core.designsystem.theme.NiaTheme
+import com.apps.longhrk.core.designsystem.theme.HRKTheme
 import kotlinx.coroutines.launch
 
 @Composable
@@ -152,7 +152,7 @@ fun NiaOverlayLoadingWheel(
 @ThemePreviews
 @Composable
 fun NiaLoadingWheelPreview() {
-    NiaTheme {
+    HRKTheme {
         Surface {
             NiaLoadingWheel(contentDesc = "LoadingWheel")
         }
@@ -162,7 +162,7 @@ fun NiaLoadingWheelPreview() {
 @ThemePreviews
 @Composable
 fun NiaOverlayLoadingWheelPreview() {
-    NiaTheme {
+    HRKTheme {
         Surface {
             NiaOverlayLoadingWheel(contentDesc = "LoadingWheel")
         }

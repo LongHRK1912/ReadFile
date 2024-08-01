@@ -26,9 +26,9 @@ import androidx.compose.ui.test.FontScale
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onRoot
 import com.github.takahirom.roborazzi.captureRoboImage
-import com.apps.longhrk.core.designsystem.component.NiaTopAppBar
+import com.apps.longhrk.core.designsystem.component.HRKTopAppBar
 import com.apps.longhrk.core.designsystem.icon.NiaIcons
-import com.apps.longhrk.core.designsystem.theme.NiaTheme
+import com.apps.longhrk.core.designsystem.theme.HRKTheme
 import com.apps.longhrk.core.testing.util.DefaultRoborazziOptions
 import com.apps.longhrk.core.testing.util.captureMultiTheme
 import dagger.hilt.android.testing.HiltTestApplication
@@ -66,7 +66,7 @@ class TopAppBarScreenshotTests {
                 DeviceConfigurationOverride(
                     DeviceConfigurationOverride.FontScale(2f),
                 ) {
-                    NiaTheme {
+                    HRKTheme {
                         NiaTopAppBarExample()
                     }
                 }
@@ -81,7 +81,7 @@ class TopAppBarScreenshotTests {
 
     @Composable
     private fun NiaTopAppBarExample() {
-        NiaTopAppBar(
+        HRKTopAppBar(
             titleRes = android.R.string.untitled,
             navigationIcon = NiaIcons.Search,
             navigationIconContentDescription = "Navigation icon",

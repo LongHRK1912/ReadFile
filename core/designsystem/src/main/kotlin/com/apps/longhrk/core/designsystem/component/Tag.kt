@@ -25,7 +25,7 @@ import androidx.compose.material3.TextButton
 import androidx.compose.material3.contentColorFor
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.apps.longhrk.core.designsystem.theme.NiaTheme
+import com.apps.longhrk.core.designsystem.theme.HRKTheme
 
 @Composable
 fun NiaTopicTag(
@@ -64,7 +64,7 @@ fun NiaTopicTag(
 @ThemePreviews
 @Composable
 fun TagPreview() {
-    NiaTheme {
+    HRKTheme {
         NiaTopicTag(followed = true, onClick = {}) {
             Text("Topic".uppercase())
         }

@@ -38,7 +38,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
 import com.apps.longhrk.core.analytics.LocalAnalyticsHelper
-import com.apps.longhrk.core.designsystem.theme.NiaTheme
+import com.apps.longhrk.core.designsystem.theme.HRKTheme
 import com.apps.longhrk.core.model.data.UserNewsResource
 
 /**
@@ -127,7 +127,7 @@ sealed interface NewsFeedUiState {
 @Preview
 @Composable
 private fun NewsFeedLoadingPreview() {
-    NiaTheme {
+    HRKTheme {
         LazyVerticalStaggeredGrid(columns = StaggeredGridCells.Adaptive(300.dp)) {
             newsFeed(
                 feedState = NewsFeedUiState.Loading,
@@ -146,7 +146,7 @@ private fun NewsFeedContentPreview(
     @PreviewParameter(UserNewsResourcePreviewParameterProvider::class)
     userNewsResources: List<UserNewsResource>,
 ) {
-    NiaTheme {
+    HRKTheme {
         LazyVerticalStaggeredGrid(columns = StaggeredGridCells.Adaptive(300.dp)) {
             newsFeed(
                 feedState = NewsFeedUiState.Success(userNewsResources),

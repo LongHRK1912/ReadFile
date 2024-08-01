@@ -26,12 +26,12 @@ import com.apps.longhrk.core.analytics.LocalAnalyticsHelper
 import com.apps.longhrk.core.data.repository.UserNewsResourceRepository
 import com.apps.longhrk.core.data.util.NetworkMonitor
 import com.apps.longhrk.core.data.util.TimeZoneMonitor
-import com.apps.longhrk.core.designsystem.theme.NiaTheme
+import com.apps.longhrk.core.designsystem.theme.HRKTheme
 import com.apps.longhrk.core.model.data.DarkThemeConfig
 import com.apps.longhrk.core.model.data.ThemeBrand
 import com.apps.longhrk.core.ui.LocalTimeZone
 import com.apps.longhrk.ui.rememberNiaAppState
-import com.apps.longhrk.ui.NiaApp
+import com.apps.longhrk.ui.HRKApp
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.onEach
@@ -126,12 +126,12 @@ class MainActivity : ComponentActivity() {
                 LocalAnalyticsHelper provides analyticsHelper,
                 LocalTimeZone provides currentTimeZone,
             ) {
-                NiaTheme(
+                HRKTheme(
                     darkTheme = darkTheme,
                     androidTheme = shouldUseAndroidTheme(uiState),
                     disableDynamicTheming = shouldDisableDynamicTheming(uiState),
                 ) {
-                    NiaApp(appState)
+                    HRKApp(appState)
                 }
             }
         }

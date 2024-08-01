@@ -62,7 +62,7 @@ import com.apps.longhrk.core.designsystem.R.drawable
 import com.apps.longhrk.core.designsystem.component.NiaIconToggleButton
 import com.apps.longhrk.core.designsystem.component.NiaTopicTag
 import com.apps.longhrk.core.designsystem.icon.NiaIcons
-import com.apps.longhrk.core.designsystem.theme.NiaTheme
+import com.apps.longhrk.core.designsystem.theme.HRKTheme
 import com.apps.longhrk.core.model.data.FollowableTopic
 import com.apps.longhrk.core.model.data.NewsResource
 import com.apps.longhrk.core.model.data.UserNewsResource
@@ -311,7 +311,7 @@ fun NewsResourceTopics(
 @Preview("Bookmark Button")
 @Composable
 private fun BookmarkButtonPreview() {
-    NiaTheme {
+    HRKTheme {
         Surface {
             BookmarkButton(isBookmarked = false, onClick = { })
         }
@@ -321,7 +321,7 @@ private fun BookmarkButtonPreview() {
 @Preview("Bookmark Button Bookmarked")
 @Composable
 private fun BookmarkButtonBookmarkedPreview() {
-    NiaTheme {
+    HRKTheme {
         Surface {
             BookmarkButton(isBookmarked = true, onClick = { })
         }
@@ -337,7 +337,7 @@ private fun ExpandedNewsResourcePreview(
     CompositionLocalProvider(
         LocalInspectionMode provides true,
     ) {
-        NiaTheme {
+        HRKTheme {
             Surface {
                 NewsResourceCardExpanded(
                     userNewsResource = userNewsResources[0],

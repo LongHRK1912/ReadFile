@@ -37,7 +37,7 @@ import androidx.compose.ui.unit.dp
 import com.apps.longhrk.core.designsystem.component.DynamicAsyncImage
 import com.apps.longhrk.core.designsystem.component.NiaIconToggleButton
 import com.apps.longhrk.core.designsystem.icon.NiaIcons
-import com.apps.longhrk.core.designsystem.theme.NiaTheme
+import com.apps.longhrk.core.designsystem.theme.HRKTheme
 import com.apps.longhrk.core.ui.R.string
 
 @Composable
@@ -122,7 +122,7 @@ private fun InterestsIcon(topicImageUrl: String, modifier: Modifier = Modifier) 
 @Preview
 @Composable
 private fun InterestsCardPreview() {
-    NiaTheme {
+    HRKTheme {
         Surface {
             InterestsItem(
                 name = "Compose",
@@ -139,7 +139,7 @@ private fun InterestsCardPreview() {
 @Preview
 @Composable
 private fun InterestsCardLongNamePreview() {
-    NiaTheme {
+    HRKTheme {
         Surface {
             InterestsItem(
                 name = "This is a very very very very long name",
@@ -156,7 +156,7 @@ private fun InterestsCardLongNamePreview() {
 @Preview
 @Composable
 private fun InterestsCardLongDescriptionPreview() {
-    NiaTheme {
+    HRKTheme {
         Surface {
             InterestsItem(
                 name = "Compose",
@@ -174,7 +174,7 @@ private fun InterestsCardLongDescriptionPreview() {
 @Preview
 @Composable
 private fun InterestsCardWithEmptyDescriptionPreview() {
-    NiaTheme {
+    HRKTheme {
         Surface {
             InterestsItem(
                 name = "Compose",
@@ -191,7 +191,7 @@ private fun InterestsCardWithEmptyDescriptionPreview() {
 @Preview
 @Composable
 private fun InterestsCardSelectedPreview() {
-    NiaTheme {
+    HRKTheme {
         Surface {
             InterestsItem(
                 name = "Compose",

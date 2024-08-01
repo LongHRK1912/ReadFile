@@ -29,7 +29,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.apps.longhrk.core.designsystem.icon.NiaIcons
-import com.apps.longhrk.core.designsystem.theme.NiaTheme
+import com.apps.longhrk.core.designsystem.theme.HRKTheme
 
 /**
  * Now in Android filter chip with included leading checked icon as well as text content slot.
@@ -109,8 +109,8 @@ fun NiaFilterChip(
 @ThemePreviews
 @Composable
 fun ChipPreview() {
-    NiaTheme {
-        NiaBackground(modifier = Modifier.size(80.dp, 20.dp)) {
+    HRKTheme {
+        HRKBackground(modifier = Modifier.size(80.dp, 20.dp)) {
             NiaFilterChip(selected = true, onSelectedChange = {}) {
                 Text("Chip")
             }

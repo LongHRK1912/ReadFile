@@ -18,19 +18,19 @@
 
     <!-- Allows us to override night specific attributes in the
          values-night folder. -->
-    <style name="NightAdjusted.Theme.Nia" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="NightAdjusted.Theme.LongHRK" parent="android:Theme.Material.Light.NoActionBar" />
 
     <!-- The final theme we use -->
-    <style name="Theme.Nia" parent="NightAdjusted.Theme.Nia" />
+    <style name="Theme.LongHRK" parent="NightAdjusted.Theme.LongHRK" />
 
     <style name="NightAdjusted.Theme.Splash" parent="Theme.SplashScreen">
         <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
     </style>
 
-    <style name="Theme.Nia.Splash" parent="NightAdjusted.Theme.Splash">
+    <style name="Theme.LongHRK.Splash" parent="NightAdjusted.Theme.Splash">
         <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash</item>
-        <item name="postSplashScreenTheme">@style/Theme.Nia</item>
+        <item name="postSplashScreenTheme">@style/Theme.LongHRK</item>
     </style>
 
 </resources>

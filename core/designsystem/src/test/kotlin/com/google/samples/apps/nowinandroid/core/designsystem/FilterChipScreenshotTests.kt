@@ -30,9 +30,9 @@ import androidx.compose.ui.test.then
 import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.dp
 import com.github.takahirom.roborazzi.captureRoboImage
-import com.apps.longhrk.core.designsystem.component.NiaBackground
+import com.apps.longhrk.core.designsystem.component.HRKBackground
 import com.apps.longhrk.core.designsystem.component.NiaFilterChip
-import com.apps.longhrk.core.designsystem.theme.NiaTheme
+import com.apps.longhrk.core.designsystem.theme.HRKTheme
 import com.apps.longhrk.core.testing.util.DefaultRoborazziOptions
 import com.apps.longhrk.core.testing.util.captureMultiTheme
 import dagger.hilt.android.testing.HiltTestApplication
@@ -85,8 +85,8 @@ class FilterChipScreenshotTests {
                     DeviceConfigurationOverride.FontScale(2f) then
                         DeviceConfigurationOverride.ForcedSize(DpSize(80.dp, 40.dp)),
                 ) {
-                    NiaTheme {
-                        NiaBackground {
+                    HRKTheme {
+                        HRKBackground {
                             NiaFilterChip(selected = true, onSelectedChange = {}) {
                                 Text("Chip")
                             }

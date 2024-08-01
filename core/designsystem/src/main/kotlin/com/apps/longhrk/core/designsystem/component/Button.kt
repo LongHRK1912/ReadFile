@@ -34,7 +34,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.apps.longhrk.core.designsystem.icon.NiaIcons
-import com.apps.longhrk.core.designsystem.theme.NiaTheme
+import com.apps.longhrk.core.designsystem.theme.HRKTheme
 
 /**
  * Now in Android filled button with generic content slot. Wraps Material 3 [Button].
@@ -268,8 +268,8 @@ private fun NiaButtonContent(
 @ThemePreviews
 @Composable
 fun NiaButtonPreview() {
-    NiaTheme {
-        NiaBackground(modifier = Modifier.size(150.dp, 50.dp)) {
+    HRKTheme {
+        HRKBackground(modifier = Modifier.size(150.dp, 50.dp)) {
             NiaButton(onClick = {}, text = { Text("Test button") })
         }
     }
@@ -278,8 +278,8 @@ fun NiaButtonPreview() {
 @ThemePreviews
 @Composable
 fun NiaOutlinedButtonPreview() {
-    NiaTheme {
-        NiaBackground(modifier = Modifier.size(150.dp, 50.dp)) {
+    HRKTheme {
+        HRKBackground(modifier = Modifier.size(150.dp, 50.dp)) {
             NiaOutlinedButton(onClick = {}, text = { Text("Test button") })
         }
     }
@@ -288,8 +288,8 @@ fun NiaOutlinedButtonPreview() {
 @ThemePreviews
 @Composable
 fun NiaButtonLeadingIconPreview() {
-    NiaTheme {
-        NiaBackground(modifier = Modifier.size(150.dp, 50.dp)) {
+    HRKTheme {
+        HRKBackground(modifier = Modifier.size(150.dp, 50.dp)) {
             NiaButton(
                 onClick = {},
                 text = { Text("Test button") },

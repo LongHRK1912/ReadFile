@@ -37,7 +37,7 @@ import androidx.compose.ui.unit.dp
 import com.apps.longhrk.core.designsystem.theme.GradientColors
 import com.apps.longhrk.core.designsystem.theme.LocalBackgroundTheme
 import com.apps.longhrk.core.designsystem.theme.LocalGradientColors
-import com.apps.longhrk.core.designsystem.theme.NiaTheme
+import com.apps.longhrk.core.designsystem.theme.HRKTheme
 import kotlin.math.tan
 
 /**
@@ -48,7 +48,7 @@ import kotlin.math.tan
  * @param content The background content.
  */
 @Composable
-fun NiaBackground(
+fun HRKBackground(
     modifier: Modifier = Modifier,
     content: @Composable () -> Unit,
 ) {
@@ -74,7 +74,7 @@ fun NiaBackground(
  * @param content The background content.
  */
 @Composable
-fun NiaGradientBackground(
+fun HRKGradientBackground(
     modifier: Modifier = Modifier,
     gradientColors: GradientColors = LocalGradientColors.current,
     content: @Composable () -> Unit,
@@ -150,47 +150,47 @@ annotation class ThemePreviews
 @ThemePreviews
 @Composable
 fun BackgroundDefault() {
-    NiaTheme(disableDynamicTheming = true) {
-        NiaBackground(Modifier.size(100.dp), content = {})
+    HRKTheme(disableDynamicTheming = true) {
+        HRKBackground(Modifier.size(100.dp), content = {})
     }
 }
 
 @ThemePreviews
 @Composable
 fun BackgroundDynamic() {
-    NiaTheme(disableDynamicTheming = false) {
-        NiaBackground(Modifier.size(100.dp), content = {})
+    HRKTheme(disableDynamicTheming = false) {
+        HRKBackground(Modifier.size(100.dp), content = {})
     }
 }
 
 @ThemePreviews
 @Composable
 fun BackgroundAndroid() {
-    NiaTheme(androidTheme = true) {
-        NiaBackground(Modifier.size(100.dp), content = {})
+    HRKTheme(androidTheme = true) {
+        HRKBackground(Modifier.size(100.dp), content = {})
     }
 }
 
 @ThemePreviews
 @Composable
 fun GradientBackgroundDefault() {
-    NiaTheme(disableDynamicTheming = true) {
-        NiaGradientBackground(Modifier.size(100.dp), content = {})
+    HRKTheme(disableDynamicTheming = true) {
+        HRKGradientBackground(Modifier.size(100.dp), content = {})
     }
 }
 
 @ThemePreviews
 @Composable
 fun GradientBackgroundDynamic() {
-    NiaTheme(disableDynamicTheming = false) {
-        NiaGradientBackground(Modifier.size(100.dp), content = {})
+    HRKTheme(disableDynamicTheming = false) {
+        HRKGradientBackground(Modifier.size(100.dp), content = {})
     }
 }
 
 @ThemePreviews
 @Composable
 fun GradientBackgroundAndroid() {
-    NiaTheme(androidTheme = true) {
-        NiaGradientBackground(Modifier.size(100.dp), content = {})
+    HRKTheme(androidTheme = true) {
+        HRKGradientBackground(Modifier.size(100.dp), content = {})
     }
 }

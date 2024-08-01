@@ -29,15 +29,13 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.dp
 import androidx.window.core.layout.WindowSizeClass
-import com.apps.longhrk.ui.NiaApp
-import com.apps.longhrk.ui.rememberNiaAppState
 import com.github.takahirom.roborazzi.captureRoboImage
 import com.apps.longhrk.core.data.repository.TopicsRepository
 import com.apps.longhrk.core.data.repository.UserDataRepository
 import com.apps.longhrk.core.data.repository.UserNewsResourceRepository
 import com.apps.longhrk.core.data.util.NetworkMonitor
 import com.apps.longhrk.core.data.util.TimeZoneMonitor
-import com.apps.longhrk.core.designsystem.theme.NiaTheme
+import com.apps.longhrk.core.designsystem.theme.HRKTheme
 import com.apps.longhrk.core.testing.util.DefaultRoborazziOptions
 import com.apps.longhrk.uitesthiltmanifest.HiltComponentActivity
 import dagger.hilt.android.testing.BindValue
@@ -134,13 +132,13 @@ class NiaAppScreenSizesScreenshotTests {
                 DeviceConfigurationOverride(
                     override = DeviceConfigurationOverride.ForcedSize(DpSize(width, height)),
                 ) {
-                    NiaTheme {
+                    HRKTheme {
                         val fakeAppState = rememberNiaAppState(
                             networkMonitor = networkMonitor,
                             userNewsResourceRepository = userNewsResourceRepository,
                             timeZoneMonitor = timeZoneMonitor,
                         )
-                        NiaApp(
+                        HRKApp(
                             fakeAppState,
                             windowAdaptiveInfo = WindowAdaptiveInfo(
                                 windowSizeClass = WindowSizeClass.compute(

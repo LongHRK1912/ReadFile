@@ -34,11 +34,11 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.apps.longhrk.core.designsystem.icon.NiaIcons
-import com.apps.longhrk.core.designsystem.theme.NiaTheme
+import com.apps.longhrk.core.designsystem.theme.HRKTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun NiaTopAppBar(
+fun HRKTopAppBar(
     @StringRes titleRes: Int,
     navigationIcon: ImageVector,
     navigationIconContentDescription: String,
@@ -78,8 +78,8 @@ fun NiaTopAppBar(
 @Preview("Top App Bar")
 @Composable
 private fun NiaTopAppBarPreview() {
-    NiaTheme {
-        NiaTopAppBar(
+    HRKTheme {
+        HRKTopAppBar(
             titleRes = android.R.string.untitled,
             navigationIcon = NiaIcons.Search,
             navigationIconContentDescription = "Navigation icon",

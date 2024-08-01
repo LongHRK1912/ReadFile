@@ -57,7 +57,7 @@ fun rememberNiaAppState(
     timeZoneMonitor: TimeZoneMonitor,
     coroutineScope: CoroutineScope = rememberCoroutineScope(),
     navController: NavHostController = rememberNavController(),
-): NiaAppState {
+): HRKAppState {
     NavigationTrackingSideEffect(navController)
     return remember(
         navController,
@@ -66,7 +66,7 @@ fun rememberNiaAppState(
         userNewsResourceRepository,
         timeZoneMonitor,
     ) {
-        NiaAppState(
+        HRKAppState(
             navController = navController,
             coroutineScope = coroutineScope,
             networkMonitor = networkMonitor,
@@ -77,7 +77,7 @@ fun rememberNiaAppState(
 }
 
 @Stable
-class NiaAppState(
+class HRKAppState(
     val navController: NavHostController,
     coroutineScope: CoroutineScope,
     networkMonitor: NetworkMonitor,

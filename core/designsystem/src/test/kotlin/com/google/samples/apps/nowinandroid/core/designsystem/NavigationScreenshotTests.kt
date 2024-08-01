@@ -31,7 +31,7 @@ import com.github.takahirom.roborazzi.captureRoboImage
 import com.apps.longhrk.core.designsystem.component.NiaNavigationBar
 import com.apps.longhrk.core.designsystem.component.NiaNavigationBarItem
 import com.apps.longhrk.core.designsystem.icon.NiaIcons
-import com.apps.longhrk.core.designsystem.theme.NiaTheme
+import com.apps.longhrk.core.designsystem.theme.HRKTheme
 import com.apps.longhrk.core.testing.util.DefaultRoborazziOptions
 import com.apps.longhrk.core.testing.util.captureMultiTheme
 import dagger.hilt.android.testing.HiltTestApplication
@@ -70,7 +70,7 @@ class NavigationScreenshotTests {
                 DeviceConfigurationOverride(
                     DeviceConfigurationOverride.FontScale(2f),
                 ) {
-                    NiaTheme {
+                    HRKTheme {
                         NiaNavigationBarExample("Looong item")
                     }
                 }

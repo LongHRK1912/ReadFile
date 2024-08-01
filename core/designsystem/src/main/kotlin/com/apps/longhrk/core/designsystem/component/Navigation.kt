@@ -28,7 +28,6 @@ import androidx.compose.material3.NavigationRail
 import androidx.compose.material3.NavigationRailItem
 import androidx.compose.material3.NavigationRailItemDefaults
 import androidx.compose.material3.Text
-import androidx.compose.material3.adaptive.ExperimentalMaterial3AdaptiveApi
 import androidx.compose.material3.adaptive.WindowAdaptiveInfo
 import androidx.compose.material3.adaptive.currentWindowAdaptiveInfo
 import androidx.compose.material3.adaptive.navigationsuite.ExperimentalMaterial3AdaptiveNavigationSuiteApi
@@ -42,7 +41,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.apps.longhrk.core.designsystem.icon.NiaIcons
-import com.apps.longhrk.core.designsystem.theme.NiaTheme
+import com.apps.longhrk.core.designsystem.theme.HRKTheme
 
 /**
  * Now in Android navigation bar item with icon and label content slots. Wraps Material 3
@@ -186,7 +185,7 @@ fun NiaNavigationRail(
  */
 
 @Composable
-fun NiaNavigationSuiteScaffold(
+fun HRKNavigationSuiteScaffold(
     navigationSuiteItems: NiaNavigationSuiteScope.() -> Unit,
     modifier: Modifier = Modifier,
     windowAdaptiveInfo: WindowAdaptiveInfo = currentWindowAdaptiveInfo(),
@@ -282,7 +281,7 @@ fun NiaNavigationBarPreview() {
         NiaIcons.Grid3x3,
     )
 
-    NiaTheme {
+    HRKTheme {
         NiaNavigationBar {
             items.forEachIndexed { index, item ->
                 NiaNavigationBarItem(
@@ -322,7 +321,7 @@ fun NiaNavigationRailPreview() {
         NiaIcons.Grid3x3,
     )
 
-    NiaTheme {
+    HRKTheme {
         NiaNavigationRail {
             items.forEachIndexed { index, item ->
                 NiaNavigationRailItem(
